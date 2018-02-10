@@ -1,0 +1,27 @@
+object EjemploTienda {
+  
+  def descuentos(cantidad:Int):Double = {
+    val precio = 356.82
+    var total = 0.0
+    
+    if(cantidad < 5){
+      total = cantidad * precio
+    }
+    if(cantidad >= 5 && cantidad <=12){
+      total = cantidad * (precio-(precio*0.15))
+    }
+    if(cantidad >13){
+      total = cantidad * (precio-(precio*0.3))
+    }
+    
+    total
+  }
+  
+  def main(args: Array[String]): Unit = {
+    println("Cantidad de pantalones que desea comprar: ")
+    var cantidad = readInt()
+    println("Su total es: ")
+    println(descuentos(cantidad) )
+  }
+  
+}
