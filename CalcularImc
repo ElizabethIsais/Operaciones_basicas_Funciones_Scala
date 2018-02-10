@@ -1,0 +1,35 @@
+object calcularIMC {
+  def calcularImc(peso:Double, altura:Double):Double = {
+    var imc = peso / (altura*altura)
+    
+    if(imc < 16)
+      println("Criterio de Ingreso en hospital")
+    if(imc >= 16 && imc <=17)
+      println("Infrapeso")
+    if(imc > 17 && imc <=18)
+      println("Bajo Peso")
+    if(imc > 18 && imc <=25)
+      println("Saludable")
+    if(imc > 25 && imc <=30)
+      println("Sobrepeso (obesidad de grado I)")
+    if(imc > 30 && imc <=35)
+      println("sobrepeso crónico (obesidad de grado II)")
+    if(imc > 35 && imc <=40)
+      println("obesidad premórbida (obesidad de grado III)")
+    if(imc > 40)
+      println("obesidad mórbida (obesidad de grado IV)")
+    
+    imc
+  }
+  
+  def main(args: Array[String]): Unit = {
+    println("Calcular IMC")
+    println("Ingrese su peso en Kg: ")
+    var peso = readDouble()
+    println("Ingrese su altura en metros: ")
+    var altura = readDouble()
+    
+    println("Su IMC es:")
+    println(calcularImc(peso, altura))
+  }
+}
