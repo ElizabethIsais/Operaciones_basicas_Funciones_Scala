@@ -34,7 +34,7 @@ object EjemploBanco {
       
     puntos
   }
-  
+ 
   def main(args: Array[String]): Unit = {
     println("Solicitud de Banco")
     val nombre = readLine("Cual es su nombre?")
