@@ -1,0 +1,131 @@
+import scala.math._
+import sun.applet.Main
+
+object CalcularAreaPerimetro {
+  
+  def areaCirculo(r:Int):Double = {
+    var area = Pi*(r*r)
+    area 
+  }
+  
+  def perimCirculo(r:Int):Double = {
+    var perim = 2 * Pi * r
+    perim
+  }
+  
+  def areaTriangulo(base:Double, altura:Double):Double = {
+    var area = (base * altura)/2
+    area 
+  }
+  
+  def perimTriangulo(a:Double, b:Double, c:Double):Double = {
+    var perim = a + b + c 
+    perim
+  }
+  
+  def areaRectangulo(base:Double, altura:Double):Double = {
+    var area = (base * altura)
+    area 
+  }
+  
+  def perimRectangulo(a:Double, b:Double):Double = {
+    var perim = (a*2) + (b*2) 
+    perim
+  }
+  def main(args: Array[String]): Unit = {
+      
+    println("1. Circulo")
+    println("2. Triangulo")
+    println("3. Rectangulo")
+    val opcion = readLine("Escoge una opción: ")
+    
+    println("-----------------------");
+    
+    //**********Circulo *********
+    if(opcion == "1"){
+      println("Circulo")
+      println("1. Area")
+      println("2. Perimetro")
+      val opcionCirc = readLine("Escoge una opción: ")
+      
+      println("-----------------------"); 
+           
+      if(opcionCirc == "1"){
+       println("Area")
+       println("Ingrese el radio: ");
+       var r = readInt()
+       print("El area del Circulo es: ")      
+       println(areaCirculo(r))
+      }
+      else if(opcionCirc == "2"){
+       println("Perimetro")
+       println("Ingrese el radio: ");
+       var r = readInt()
+       print("El perimetro del Circulo es: ")      
+       println(perimCirculo(r))
+      }     
+    }
+    
+    //**********Triangulo *********
+    
+      if(opcion == "2"){
+      println("Triangulo")
+      println("1. Area")
+      println("2. Perimetro")
+      val opcionTrian = readLine("Escoge una opción: ")
+      
+      println("-----------------------"); 
+           
+      if(opcionTrian == "1"){
+       println("Area")
+       println("Ingresa la base: ");
+       var base = readDouble()
+       println("Ingresa la altura: ");
+       var altura = readDouble()
+       print("El area del Triangulo es: ")      
+       println(areaTriangulo(base, altura))
+      }
+      else if(opcionTrian == "2"){
+       println("Perimetro")
+       println("Ingrese lado a: ");
+       var a = readDouble()
+       println("Ingrese lado b: ");
+       var b = readDouble()
+       println("Ingrese lado c: ");
+       var c = readDouble()
+       print("El perimetro del Triangulo es: ")      
+       println(perimTriangulo(a,b,c))
+      }     
+    }
+      
+    //**********Rectangulo *********
+      
+     if(opcion == "3"){
+      println("REctangulo")
+      println("1. Area")
+      println("2. Perimetro")
+      val opcionRect = readLine("Escoge una opción: ")
+      
+      println("-----------------------"); 
+           
+      if(opcionRect == "1"){
+       println("Area")
+       println("Ingresa la base: ");
+       var base = readDouble()
+       println("Ingresa la altura: ");
+       var altura = readDouble()
+       print("El area del Rectangulo es: ")      
+       println(areaRectangulo(base, altura))
+      }
+      else if(opcionRect == "2"){
+       println("Perimetro")
+       println("Ingrese lado a: ");
+       var a = readDouble()
+       println("Ingrese lado b: ");
+       var b = readDouble()
+       print("El perimetro del Rectangulo es: ")      
+       println(perimRectangulo(a,b))
+      }     
+    }
+  }
+}
