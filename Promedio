@@ -1,0 +1,33 @@
+object Promedio {
+  def calcularPromedio(cal1:Int, cal2:Int, cal3:Int, cal4:Int, cal5:Int):Int = {
+    var prom = (cal1 + cal2 + cal3 + cal4 + cal5)/5
+    
+    if(prom <= 69)
+      println("Terrible")
+    if(prom <= 79 && prom >= 70)  
+      println("Regular")
+    if(prom <= 89 && prom >= 80)  
+      println("Bien")
+    if(prom <= 100 && prom >= 90)  
+      println("Excelente")
+    
+    prom
+  }
+  
+  def main(args: Array[String]): Unit = {
+    println("Ingrese calificación 1: ")
+    var cal1 = readInt()
+    println("Ingrese calificación 2: ")
+    var cal2 = readInt()
+    println("Ingrese calificación 3: ")
+    var cal3 = readInt()
+    println("Ingrese calificación 4: ")
+    var cal4 = readInt()
+    println("Ingrese calificación 5: ")
+    var cal5 = readInt()
+    println("El promedio es: ")
+    println(calcularPromedio(cal1, cal2, cal3, cal4, cal5))
+  }
+    
+    
+}
