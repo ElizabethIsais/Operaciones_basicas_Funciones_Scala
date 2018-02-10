@@ -33,7 +33,7 @@ object CalcularAreaPerimetro {
     perim
   }
   def main(args: Array[String]): Unit = {
-      
+     
     println("1. Circulo")
     println("2. Triangulo")
     println("3. Rectangulo")
